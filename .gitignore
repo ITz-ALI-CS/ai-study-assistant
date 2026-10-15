@@ -1,0 +1,18 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Secrets and local data (never upload these)
+backend/.env
+backend/study.db
+backend/uploads/
+imp.txt
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Editor / OS
+.vscode/
+.DS_Store

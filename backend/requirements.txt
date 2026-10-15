@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+bcrypt
+pyjwt
+python-multipart
+pypdf
+scikit-learn
+groq
+python-dotenv
+python-docx

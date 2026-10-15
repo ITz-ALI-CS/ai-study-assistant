@@ -1,0 +1,176 @@
+/* ---------- Formal navy theme ---------- */
+:root {
+  --bg: #f2f5fa;
+  --card: #ffffff;
+  --text: #1b2433;
+  --muted: #667085;
+  --border: #dbe2ec;
+  --accent: #1f4e9c;
+  --accent-soft: #e6eefa;
+}
+
+.ws .topbar {
+  background: #14284b;
+  color: #ffffff;
+  border-bottom: none;
+}
+.ws .topbar .logo {
+  color: #ffffff;
+}
+.ws .topbar .logo-dot {
+  background: #7fb0ff;
+}
+.ws .topbar .doc-title {
+  color: #e6edf9;
+  border-left-color: rgba(255, 255, 255, 0.25);
+}
+.ws .topbar .pill {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e6edf9;
+}
+.ws .topbar .muted {
+  color: #b9c6df;
+}
+.ws .topbar .btn {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.ws .topbar .btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ws .panel {
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.ws .panel-head {
+  background: #f8fafc;
+  font-weight: 500;
+}
+
+/* ---------- Flashcards ---------- */
+.stats-row {
+  display: flex;
+  gap: 10px;
+}
+.stat-mini {
+  flex: 1;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.stat-mini b {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.stat-mini span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.flash {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  min-height: 190px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.flash-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.flash-text {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.flash-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.flash-actions .btn,
+.flash-actions .btn-primary {
+  min-width: 110px;
+}
+
+/* ---------- Dashboard ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.stat-tile {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 12px;
+}
+.stat-tile b {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+}
+.stat-tile span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.level-box {
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 12px;
+}
+.level-box .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(31, 78, 156, 0.18);
+  overflow: hidden;
+}
+.bar > div {
+  height: 100%;
+  background: var(--accent);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.badge {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.badge.on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.section-title {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 4px 0 -2px;
+}

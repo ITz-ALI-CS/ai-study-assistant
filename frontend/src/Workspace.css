@@ -1,0 +1,393 @@
+.ws {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.doc-title {
+  font-weight: 500;
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+}
+
+.doc-title:empty {
+  display: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.pill {
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.btn {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--bg);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.banner {
+  margin: 10px 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x {
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ws-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.panel-head {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 8px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.doc-item:hover {
+  background: var(--bg);
+}
+
+.doc-item.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.doc-item .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.side-actions {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paste-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+textarea {
+  min-height: 110px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  color: var(--text);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.pdf-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+.empty {
+  margin: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 20px;
+}
+
+.suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 6px;
+}
+
+.tab {
+  padding: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 500;
+}
+
+.stylebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 0;
+  font-size: 12px;
+}
+
+.seg {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seg button {
+  border: none;
+  background: none;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.seg button.on {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.msgs {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble {
+  max-width: 92%;
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.bubble.ai {
+  align-self: flex-start;
+  background: var(--bg);
+}
+
+.sources {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: none;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: #fdf0cc;
+  color: #7a5200;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: #fae6a8;
+}
+
+.composer {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+}
+
+.composer .btn-primary {
+  padding: 0 18px;
+}
+
+.qcard {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qtext {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.opt {
+  text-align: left;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.opt:hover {
+  border-color: var(--accent);
+}
+
+.opt.sel {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.opt.right {
+  border-color: #2e8b57;
+  background: #e6f4ec;
+  color: #1d6b40;
+}
+
+.opt.wrong {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.explain {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.score-box {
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .ws {
+    height: auto;
+    min-height: 100vh;
+  }
+  .ws-body {
+    grid-template-columns: 1fr;
+  }
+  .pdf-frame {
+    height: 480px;
+    flex: none;
+  }
+  .panel {
+    min-height: 420px;
+  }
+}
